@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <link rel="website icon" href="logo.png">
+    <title>Re-Educa - Sustentabilidade e Reciclagem</title>
+
+    <title>Simulação de Compra - Re-Educa</title>
+
+    <link rel="stylesheet" href="./assets/styles.css">
+    <style>
+        /* Estilos Gerais */
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            color: #4CAF50;
+            font-size: 36px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Formulário de Simulação */
+        .order-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .order-form label {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .order-form input {
+            width: 80%;
+            max-width: 400px;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+        }
+
+        .order-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .order-form button:hover {
+            background-color: #45a049;
+        }
+
+        /* Exibição do resultado */
+        .result {
+            font-size: 22px;
+            color: #4CAF50;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #ffffff;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="container">
+            <h2>Simule Sua Encomenda de Papel Reciclado</h2>
+            <p>Faça uma simulação rápida de como seria encomendar o papel reciclado da Re-Educa. Informe a quantidade de folhas de papel branco desejada.</p>
+
+            <form class="order-form" id="simulation-form">
+                <label for="quantidade">Quantidade (em folhas):</label>
+                <input type="number" id="quantidade" name="quantidade" min="10" placeholder="Digite a quantidade desejada" required>
+
+                <button type="submit">Calcular Preço</button>
+            </form>
+
+            <!-- Exibição do preço -->
+            <div id="result" class="result"></div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Re-Educa. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função de cálculo
+        document.getElementById('simulation-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio do formulário
+            
+            const basePrice = 10; // Preço fixo da apostila
+            const pricePerPage = 0.20; // Preço por página
+
+            // Captura a quantidade de páginas inserida
+            const quantity = document.getElementById('quantidade').value;
+
+            if (quantity && quantity >= 10) { // Verifica se a quantidade é válida
+                const totalPrice = basePrice + (pricePerPage * quantity); // Calcula o preço total
+                document.getElementById('result').innerHTML = `O preço total da sua encomenda é: R$ ${totalPrice.toFixed(2)}`; // Exibe o preço total
+            } else {
+                document.getElementById('result').innerHTML = 'Por favor, insira uma quantidade válida (mínimo 10 folhas).';
+            }
+        });
+    </script>
+</body>
+</html>

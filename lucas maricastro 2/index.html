@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <link rel="website icon" href="logo.png">
+        <title>Re-Educa - Sustentabilidade e Reciclagem</title>
+
+        <link rel="stylesheet" href="./assets/styles.css">
+        <style>
+            /* Estilos Gerais */
+            body {
+                font-family: 'Arial', sans-serif;
+                margin: 0;
+                padding: 0;
+                color: #333;
+            }
+
+            h1, h2, h3, p {
+                margin: 0 0 15px 0;
+            }
+
+            h1 {
+                color: #ffffff;
+                font-size: 48px;
+                text-align: center;
+            }
+
+            h2 {
+                color: #4CAF50;
+                font-size: 36px;
+                text-align: center;
+                margin-top: 30px;
+            }
+
+            p {
+                font-size: 18px;
+                line-height: 1.6;
+                text-align: center;
+            }
+
+            .container {
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            /* Header */
+            header {
+                background-color: #4CAF50;
+                padding: 80px 0;
+                color: #ffffff;
+                text-align: center;
+            }
+
+            header p {
+                font-size: 24px;
+                margin-top: 10px;
+            }
+
+            /* Seções */
+            section {
+                padding: 50px 0;
+            }
+
+            #sobre, #materiais, #passos, #dicas, #simulacao {
+                background-color: #f4f4f9;
+            }
+
+            /* Benefícios */
+            #beneficios {
+                background-color: #e9ecef;
+            }
+
+            h3 {
+                font-size: 24px;
+                margin-top: 30px;
+                color: #4CAF50;
+            }
+
+            /* Listas e Ordens */
+            ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+            ul li {
+                background: url('./assets/checkmark.svg') no-repeat left center;
+                padding-left: 30px;
+                margin-bottom: 10px;
+            }
+
+            ol li {
+                margin-bottom: 20px;
+            }
+
+            /* Botões */
+            .simulation-btn, .reciclagem-btn {
+                display: inline-block;
+                background-color: #4CAF50;
+                color: white;
+                padding: 15px 30px;
+                border: none;
+                border-radius: 5px;
+                font-size: 18px;
+                cursor: pointer;
+                text-align: center;
+                text-decoration: none;
+                margin: 20px auto;
+                display: block;
+            }
+
+            .simulation-btn:hover, .reciclagem-btn:hover {
+                background-color: #45a049;
+            }
+
+            /* Footer */
+            footer {
+                background-color: #333;
+                color: #ffffff;
+                padding: 40px 0;
+                text-align: center;
+            }
+
+            footer p {
+                margin: 0;
+                font-size: 14px;
+            }
+
+            /* Responsividade */
+            @media (max-width: 768px) {
+                .container {
+                    width: 90%;
+                }
+
+                h1 {
+                    font-size: 36px;
+                }
+
+                h2 {
+                    font-size: 28px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1>RE-EDUCA</h1>
+                <p>Transformando papéis e apostilas usadas para criar novas.</p>
+            </div>
+        </header>
+
+        <!-- Quem Somos Nós -->
+        <section id="quem-somos">
+            <div class="container">
+                <h2>Quem Somos Nós</h2>
+                <p>A Re-Educa é uma empresa com fins lucrativos ecológicos que utiliza papéis reciclados para a criação de novas apostilas. Estamos abertos a parcerias com escolas dispostas a colaborar, e nosso objetivo é reduzir a quantidade de papel descartado, reaproveitando-o para dar um propósito maior ao material que seria jogado fora.</p>
+            </div>
+        </section>
+
+        <!-- Nosso Objetivo -->
+        <section id="objetivo">
+            <div class="container">
+                <h2>Nosso Objetivo</h2>
+                <p>Nosso objetivo é colaborar com escolas para desenvolver um projeto de reciclagem de apostilas. As apostilas que não seriam mais utilizadas seriam "doadas" para a Re-Educa, que as reciclaria para a fabricação de novas de maneira ecológica e sustentável.</p>
+            </div>
+        </section>
+
+        <!-- Benefícios da Reciclagem de Apostilas com a Re-Educa -->
+        <section id="beneficios">
+            <div class="container">
+                <h2>Benefícios da Reciclagem de Apostilas</h2>
+                <h3>1. Preservação Ambiental</h3>
+                <p><strong>Redução do Desmatamento:</strong> Recicle suas apostilas e contribua para a preservação das florestas. O uso de papel reciclado reduz a demanda por papel virgem.</p>
+                <p><strong>Menor Consumo de Recursos Naturais:</strong> A produção de papel reciclado consome menos água e energia, minimizando o impacto ambiental global.</p>
+                
+                <h3>2. Redução de Resíduos</h3>
+                <p><strong>Minimização de Lixo:</strong> Reciclar apostilas ajuda a desviar grandes quantidades de resíduos dos aterros sanitários, diminuindo a poluição.</p>
+                <p><strong>Economia Circular:</strong> Promovemos a reutilização contínua de materiais, criando um ciclo sustentável e duradouro.</p>
+
+                <h3>3. Benefícios Educacionais</h3>
+                <p><strong>Educação Ambiental:</strong> Nossa iniciativa educa alunos sobre sustentabilidade, incentivando práticas ecológicas desde cedo.</p>
+                <p><strong>Modelo para Outros Setores:</strong> Nosso projeto pode inspirar outras instituições e empresas a adotar práticas verdes.</p>
+            </div>
+        </section>
+
+        <!-- Botões para Simulação e Processo de Reciclagem -->
+        <section id="simulacao">
+            <div class="container">
+                <h2>Faça Já Seu Pedido</h2>
+                <p>Encomende agora o seu papel reciclado. Escolha a quantidade e o tipo de papel desejado clicando nos botões abaixo:</p>
+                <a href="simulação.html" class="simulation-btn">Encomende Já</a>
+                <a href="processo-reciclagem.html" class="reciclagem-btn">Processo de Reciclagem</a>
+            </div>
+        </section>
+
+        <!-- Rodapé -->
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 Re-Educa. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+    </body>
+</html>
